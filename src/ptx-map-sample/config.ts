@@ -9,3 +9,4 @@ export const MAP_TILE_URL = 'https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMa
 // open street map
 
 export const ICON_IMAGE_URL = './asset/images/icons/icon-marker.svg';
+export const ICON_MRT_URL = './asset/images/icons/icon-directions_subway-24px.svg';
