@@ -17,7 +17,7 @@ const MrtMarker = (props: MrtMarkerProps) => {
       icon={icon}
       position={props.position}
     >
-      <Popup>
+      <Popup autoPan={false}>
         <MrtMarkerContent {...props} />
       </Popup>
     </Marker>
