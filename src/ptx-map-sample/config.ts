@@ -1,6 +1,7 @@
 import { Position } from "common-types";
 
 export const DEFAULT_MAP_CENTER: Position = [22.631411, 120.301915];
+export const DEFAULT_MAP_ZOOM = 14;
 
 export const MAP_TILE_URL = 'https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMapsCompatible/{z}/{y}/{x}';
 // 國土測繪中心map

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Position } from "common-types";
 import { Viewport } from "react-leaflet";
+import { DEFAULT_MAP_ZOOM } from "../config";
 
 export interface UseMapPositionOptions {
   zoom?: number | undefined
@@ -9,7 +10,7 @@ export interface UseMapPositionOptions {
 
 const useMapPosition = (options: UseMapPositionOptions) => {
   const [mapViewPort, setMapViewPort] = useState({
-    zoom: 14 as number | undefined | null,
+    zoom: DEFAULT_MAP_ZOOM as number | undefined | null,
     center: options.position,
   });
 

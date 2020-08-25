@@ -1,11 +1,24 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
+import usePtxMapSample from './functions/usePtxMapSample';
+import MapPart from '../components/MapPart/MapPart';
 
 const PtxMapSample = () => {
+  const {
+    loading,
+    mrtStations,
+    mapViewPort,
+    handleFetchMrtStations,
+    handleSetMapViewPort
+  } = usePtxMapSample();
+
   return (
-    <Box>
-      
-    </Box>
+    <MapPart 
+      position={mapViewPort.center}
+      zoom={mapViewPort.zoom as number}
+      markerListData={mrtStations}
+      onSearchMrtStations={handleFetchMrtStations}
+      onViewportChanged={handleSetMapViewPort}
+    />
   );
 };
 

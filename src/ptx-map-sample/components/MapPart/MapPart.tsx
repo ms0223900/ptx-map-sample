@@ -1,22 +1,29 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
 import MapWrapper from './MapWrapper';
-import { DEFAULT_MAP_CENTER } from '../../config';
 import ControlButtons from '../ButtonsPart/ControlButtons';
 import MrtMarkerList from './MrtMarkerList';
+import { MapPartProps } from './types';
 
-const MapPart = () => {
+const MapPart = ({
+  zoom,
+  position,
+  markerListData,
+  onSearchMrtStations,
+  onViewportChanged
+}: MapPartProps) => {
   return (
     <MapWrapper
-      position={DEFAULT_MAP_CENTER}
+      position={position}
+      zoom={zoom}
+      onViewportChanged={onViewportChanged}
     >
       <MrtMarkerList 
         // position={DEFAULT_MAP_CENTER} 
         // locationEstimateTimeListData={[]} 
         // mrtStationName={'美麗島'} 
-        markerListData={[]}
+        markerListData={markerListData}
       />
-      <ControlButtons onSearchMrtStations={() => {}} />
+      <ControlButtons onSearchMrtStations={onSearchMrtStations} />
     </MapWrapper>
   );
 };

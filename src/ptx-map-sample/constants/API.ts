@@ -1,8 +1,8 @@
 export const PTX_APP_ID = 
-  process.env.REACT_APP_PTX_APP_ID;
+  process.env.REACT_APP_PTX_APP_ID as string;
   
 export const PTX_APP_KEY = 
-  process.env.REACT_APP_PTX_APP_KEY; 
+  process.env.REACT_APP_PTX_APP_KEY as string; 
 
 export interface GetMrtNearStationsUrlOptions {
   lat: number | string

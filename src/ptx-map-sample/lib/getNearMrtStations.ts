@@ -27,7 +27,7 @@ const getNearMrtStations = async (options: GetNearStationsOptions) => {
   const stationIds = mrtNearStations.map(s => s.StationID);
   
   if(stationIds.length > 0) {
-    // 會取得兩倍的資料(含去返程departure, destination)
+    // 會取得兩倍的資料(含去返程 departure, destination)
     const stationsLiveInfoUri = PTXHandlers.getAPIWithStationIDsFilter(MRT_STATIONS_LIVE_INFO_API, stationIds);
     const mrtLiveInfoStations = await fetchData<SingleMrtStationLiveInfo[]>({
       uri: stationsLiveInfoUri,

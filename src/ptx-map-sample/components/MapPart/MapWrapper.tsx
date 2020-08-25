@@ -2,7 +2,7 @@ import React from "react";
 import { Map as LeafletMap, TileLayer } from "react-leaflet";
 import { MapWrapperProps } from "./types";
 import { Box, makeStyles } from "@material-ui/core";
-import { MAP_TILE_URL } from "../../config";
+import { MAP_TILE_URL, DEFAULT_MAP_ZOOM } from "../../config";
 import '../../../style/styles.scss';
 
 const useStyles = makeStyles(theme => ({
@@ -28,7 +28,7 @@ const MapWrapper = (props: MapWrapperProps) => {
         style={{
           height: "100%",
         }}
-        zoom={14}
+        zoom={DEFAULT_MAP_ZOOM}
         center={props.position}
         {...props}
       >

@@ -32,4 +32,6 @@ export interface MapWrapperProps extends Omit<MapProps, 'padding'>, BoxProps {
 
 export interface MapPartProps extends MrtMarkerListProps, ControlButtonsProps {
   position: Position
+  zoom: MapProps['zoom']
+  onViewportChanged: MapProps['onViewportChanged']
 }
