@@ -3,6 +3,7 @@ import { Map as LeafletMap, TileLayer } from "react-leaflet";
 import { MapWrapperProps } from "./types";
 import { Box, makeStyles } from "@material-ui/core";
 import { MAP_TILE_URL } from "../../config";
+import '../../../style/styles.scss';
 
 const useStyles = makeStyles(theme => ({
   root: {
